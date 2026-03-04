@@ -9,19 +9,19 @@
   "types": "types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eladcandroid/v-idle-3.git"
+    "url": "git+https://github.com/wrietberg/v-idle-3.git"
   },
   "keywords": [
     "vue",
     "vuejs",
     "plugin"
   ],
-  "author": "Elad Cohen <eladc.android@gmail.com>",
+  "author": "WR",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eladcandroid/v-idle-3/issues"
+    "url": "https://github.com/wrietberg/v-idle-3/issues"
   },
-  "homepage": "https://github.com/eladcandroid/v-idle-3#readme",
+  "homepage": "https://github.com/wrietberg/v-idle-3#readme",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
