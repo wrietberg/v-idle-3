@@ -11,7 +11,7 @@ const Vidle = defineComponent({
       this.display
     );
   },
-  emits: ["idle", "remind"],
+  emits: ["idle", "remind", "reset"],
   props: {
     duration: {
       type: Number,
@@ -106,6 +106,9 @@ const Vidle = defineComponent({
     remind() {
       this.$emit("remind", this.diff);
     },
+    reset() {
+      this.$emit("reset");
+    },
     setTimer() {
       this.timer = window.setInterval(this.idle, this.duration * 1000);
       this.counter = window.setInterval(this.countdown, 1000);
@@ -113,6 +116,7 @@ const Vidle = defineComponent({
     clearTimer(event?: Event, loop = true) {
       window.clearInterval(this.timer);
       window.clearInterval(this.counter);
+      this.reset();
       if (loop) {
         this.start = Date.now();
         this.diff = 0;
